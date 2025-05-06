@@ -22,15 +22,15 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v2
       with:
-        registry: https://nexustestcicd.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_1c77214bc7a84fd59bf71e14365f66d5 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_8fab8103289f4b0184b980bf125cc104 }}
+        registry: https://nexustest.azurecr.io/
+        username: ${{ secrets.AzureAppService_ContainerUsername_080808d849cc4cdb93fc9de0e651256c }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_462b756dd5e9432497f8ec97389786d1 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: nexustestcicd.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_1c77214bc7a84fd59bf71e14365f66d5 }}/nexus:${{ github.sha }}
+        tags: nexustest.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_080808d849cc4cdb93fc9de0e651256c }}/nexus:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'nexustestcicd'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e74fff674c814e9bb7b679864dab2eb4 }}
-        images: 'nexustestcicd.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_1c77214bc7a84fd59bf71e14365f66d5 }}/nexus:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0fd9652f8089475198c06cb64c99b138 }}
+        images: 'nexustest.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_080808d849cc4cdb93fc9de0e651256c }}/nexus:${{ github.sha }}'
