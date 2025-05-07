@@ -1,0 +1,205 @@
+﻿body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+    .navbar .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #00ffc3;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+        .navbar .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+            .navbar .nav-links li a:hover {
+                color: #00ffc3;
+            }
+
+    .navbar .nav-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .navbar .signin {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .navbar .cta {
+        background-color: #00ffc3;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .navbar .cta:hover {
+            background-color: #00d4a4;
+        }
+
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+    .hero .badge {
+        background-color: #111;
+        color: #00ffcc;
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        border: 1px solid #333;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #ccc;
+        margin-bottom: 2rem;
+    }
+
+    .hero .form-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero input[type="email"] {
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 6px;
+        min-width: 250px;
+        background-color: #1f1f1f;
+        color: white;
+    }
+
+    .hero .action-btn {
+        background-color: #00ffcc;
+        color: black;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .hero .subtext {
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .hero .works-with {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-top: 1rem;
+    }
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #00ffc3;
+    cursor: pointer;
+}
+
+.nav-collapse {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-collapse {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+
+        .nav-collapse.active {
+            display: flex;
+        }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

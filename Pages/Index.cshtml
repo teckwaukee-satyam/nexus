@@ -1,23 +1,34 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
 }
 
-<div class="text-center">
-    <div class="header">
-        <h1>Welcome to Our Site</h1>
-        <p>Your success starts here</p>
-    </div>
+@section Styles {
+    <link rel="stylesheet" href="~/css/hero.css" />
+}
 
-    <div class="content">
-        <p>Discover how we can help you grow and achieve your goals.</p>
-        <a href="#learn-more" class="cta-button">Get Started</a>
-    </div>
+<div class="hero">
+    <div class="badge">Announcing our $15M Series A</div>
+    <h1>Deliver collaborative</h1>
+    <p>
+        Support your customers on Slack, Microsoft Teams, Discord and many more —<br />
+        and move from answering tickets to building genuine relationships.
+    </p>
 
-    <div class="footer">
-        &copy; 2025 Company Name. All rights reserved.
+    <div class="form-group">
+        <input type="email" placeholder="Your work email" />
+        <button class="action-btn">See Nexus in action</button>
     </div>
+    <div class="subtext">Free 14 day trial</div>
 
-    
+    <div class="works-with">
+        <span>Works with</span>
+        <img src="https://img.icons8.com/color/24/slack-new.png" alt="Slack" />
+        <img src="https://img.icons8.com/color/24/microsoft-teams.png" alt="Teams" />
+        <img src="https://img.icons8.com/color/24/discord--v2.png" alt="Discord" />
+        <img src="https://img.icons8.com/material-outlined/24/email.png" alt="Email" />
+        <span>AND MORE</span>
+    </div>
 </div>
